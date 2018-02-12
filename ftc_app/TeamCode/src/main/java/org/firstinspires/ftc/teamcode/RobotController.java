@@ -11,7 +11,6 @@ import com.qualcomm.robotcore.hardware.Servo;
  * Created by trett on 2/6/18.
  */
 @TeleOp(name="Robot Controller", group="Iterative Opmode")
-
 public class RobotController extends OpMode {
 
     DcMotor left_motor;

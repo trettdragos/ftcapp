@@ -78,6 +78,17 @@ public class BasicOpMode_Linear extends LinearOpMode {
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
         rightDrive.setDirection(DcMotor.Direction.REVERSE);
 
+        //////////
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        rightDrive.setPower(-1);
+        leftDrive.setPower(1);
+        sleep(3000);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        //////////
+        goForward(3);
+
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
         runtime.reset();
@@ -114,4 +125,19 @@ public class BasicOpMode_Linear extends LinearOpMode {
             telemetry.update();
         }
     }
+
+    void goForward(int time){
+        rightDrive.setPower(0);
+        leftDrive.setPower(0);
+        leftDrive.setPower(1);
+        rightDrive.setPower(-1);
+        sleep(time*1000);
+        rightDrive.setPower(0);
+        leftDrive.setPower(0);
+    }
+
+    void rightTurn(int degres){
+
+    }
+
 }
