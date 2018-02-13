@@ -13,7 +13,7 @@ public class TelemetryTest extends LinearOpMode{
     public void runOpMode() throws InterruptedException {
         waitForStart();
         while (opModeIsActive()){
-            telemetry.addData("muie", "milena");
+            telemetry.addData("muie", "sticano");
             telemetry.update();
         }
     }
