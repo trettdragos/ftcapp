@@ -37,7 +37,7 @@ public class RobotController extends OpMode {
             brat_motor.setPower(0.35);
         }else if(gamepad1.left_bumper){
             brat_motor.setPower(-0.35);
-        }else brat_motor.setPower(0);
+        }else brat_motor.setPower(0.1);
         if(gamepad1.a) {
             right_servo.setPosition(0);
             left_servo.setPosition(1);
