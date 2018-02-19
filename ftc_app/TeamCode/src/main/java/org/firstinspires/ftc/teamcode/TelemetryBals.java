@@ -26,13 +26,25 @@ public class TelemetryBals extends LinearOpMode{
         putulica = hardwareMap.servo.get("putulica");
         sensorPutulica = hardwareMap.get(ColorSensor.class, "sensorPutulica");
         sensorPutulica.enableLed(true);
+        putulica.setPosition(0.53);
 
         waitForStart();
 
-        while(opModeIsActive()){
-            telemetry.addData("red:", sensorPutulica.red());
-            telemetry.addData("blue:", sensorPutulica.blue());
-            telemetry.update();
+        while(sensorPutulica.red() == 0 && sensorPutulica.blue() == 0){
+            left_motor.setPower(-0.2);
+            right_motor.setPower(0.2);
         }
+        sleep(100);
+        left_motor.setPower(0);
+        right_motor.setPower(0);
+        //pushing red
+        if(sensorPutulica.red()>sensorPutulica.blue()){
+            putulica.setPosition(0.1);
+        }else if(sensorPutulica.red()<sensorPutulica.blue()){
+            putulica.setPosition(0.9);
+        }
+        telemetry.addData("r b:", sensorPutulica.red()+";"+sensorPutulica.blue());
+        telemetry.update();
+        sleep(5000);
     }
 }
