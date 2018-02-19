@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -7,8 +9,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by trett on 2/12/18.
  */
-@TeleOp(name="MuieMIlena", group="Linear Opmode")
-
+@Autonomous(name="TelemetryTest", group="Linear Opmode")
+@Disabled
 public class TelemetryTest extends LinearOpMode{
     DcMotor left_motor;
 
