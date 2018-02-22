@@ -103,7 +103,7 @@ public class ConceptVuMarkIdentification extends LinearOpMode {
          * Once you've obtained a license key, copy the string from the Vuforia web site
          * and paste it in to your code onthe next line, between the double quotes.
          */
-        parameters.vuforiaLicenseKey = "ATsODcD/////AAAAAVw2lR...d45oGpdljdOh5LuFB9nDNfckoxb8COxKSFX";
+        parameters.vuforiaLicenseKey = "ATsHtk7/////AAAAmTzbpo/KRERhoF6Fhay/A1MzU0F1Q5Rz8nWvMtZ4rhoNByeb6beowSyrnIDhlnoclUB/lXA0m2aMSYxdAn3Ofi+3YWitGb1BlRSbVXUFJpD81FHpXpu9R04xmWYY26+227V6/AkFdaesv8HE+838MdBIeitKF4JI8e0Dl2I4uCZ9SrSE7O2OT+1ovHWn14srRPlFHB31jR2RAAQno37TWOS8nmRfbavRbXZ9pRFJ+kilycFGFTTYz1Ypn/8h2mxLrWjlKOwfNVGYjlnGzM6NKkXT0PxLHcD8hJdNAjWruDcDWXVIF4DWhP1D3NyWAbKgg/45jryngOQhFbHnM3VJwKHP+1eHaKdQXobdwfCRehtv";
 
         /*
          * We also indicate which camera on the RC that we wish to use.
@@ -148,7 +148,7 @@ public class ConceptVuMarkIdentification extends LinearOpMode {
                 /* For fun, we also exhibit the navigational pose. In the Relic Recovery game,
                  * it is perhaps unlikely that you will actually need to act on this pose information, but
                  * we illustrate it nevertheless, for completeness. */
-                OpenGLMatrix pose = ((VuforiaTrackableDefaultListener)relicTemplate.getListener()).getPose();
+                OpenGLMatrix  pose = ((VuforiaTrackableDefaultListener)relicTemplate.getListener()).getPose();
                 telemetry.addData("Pose", format(pose));
 
                 /* We further illustrate how to decompose the pose into useful rotational and
