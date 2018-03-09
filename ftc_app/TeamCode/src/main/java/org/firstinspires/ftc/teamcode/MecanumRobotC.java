@@ -6,6 +6,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
@@ -17,6 +18,9 @@ public class MecanumRobotC extends OpMode {
     DcMotor front_right;
     DcMotor back_left;
     DcMotor back_right;
+    DcMotor puller_left;
+    DcMotor puller_right;
+    CRServo servo_setup;
 
     @Override
     public void init() {
@@ -24,6 +28,9 @@ public class MecanumRobotC extends OpMode {
         front_right = hardwareMap.dcMotor.get("frontRight");
         back_left = hardwareMap.dcMotor.get("backLeft");
         back_right = hardwareMap.dcMotor.get("backRight");
+        puller_left = hardwareMap.dcMotor.get("pullerLeft");
+        puller_right = hardwareMap.dcMotor.get("pullerRight");
+        servo_setup = hardwareMap.crservo.get("servos");
     }
 
     public void movement(double backLeft, double frontLeft, double backRight, double frontRight){
@@ -52,10 +59,31 @@ public class MecanumRobotC extends OpMode {
             movement(1,1,1,1);
         }
         else if(gamepad1.left_bumper){
-            movement(-1,-1,-1,-1);;
+            movement(-1,-1,-1,-1);
         }
         else{
             movement(0,0,0,0);
         }
+
+        if (gamepad2.a) {
+            puller_left.setPower(-1);
+            puller_right.setPower(1);
+        }
+        else if (gamepad2.b) {
+            puller_left.setPower(0);
+            puller_right.setPower(0);
+        }
+
+        if (gamepad2.right_bumper){
+            servo_setup.setPower(1);
+        }
+        else if (gamepad2.left_bumper){
+            servo_setup.setPower(-1);
+        }
+        else
+        {
+            servo_setup.setPower(0);
+        }
+
     }
 }
