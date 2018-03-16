@@ -49,10 +49,10 @@ public class MecanumRobotC extends OpMode {
     @Override
     public void loop() {
         if(gamepad1.dpad_up){
-            movement(1,1,-1,-1, 1.5);
+            movement(1,1,-1,-1, 1);
         }
         else  if(gamepad1.dpad_down){
-            movement(-1,-1,1,1, 1.5);
+            movement(-1,-1,1,1, 1);
         }
         else if(gamepad1.dpad_right){
             movement(-1,1,-1,1, 2.5);
@@ -61,10 +61,10 @@ public class MecanumRobotC extends OpMode {
             movement(1,-1,1,-1, 2.5);
         }
         else if(gamepad1.right_bumper){
-            movement(1,1,1,1, 2.5);
+            movement(1,1,1,1, 1.5);
         }
         else if(gamepad1.left_bumper){
-            movement(-1,-1,-1,-1, 2.5);
+            movement(-1,-1,-1,-1, 1.5);
         }
         else{
             movement(0,0,0,0, 1.0);
@@ -94,12 +94,12 @@ public class MecanumRobotC extends OpMode {
         else if (gamepad2.x)
         {
             level.setPower(1);
-            servo_setup.setPower(0.1);
+            servo_setup.setPower(0);
         }
         else if (gamepad2.y)
         {
-            level.setPower(-1);
-            servo_setup.setPower(0.1);
+            level.setPower(-0.9);
+            servo_setup.setPower(0);
         }
         else
         {
