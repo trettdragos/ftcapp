@@ -42,9 +42,9 @@ public class RedTeamAutonomie extends LinearOpMode{
         level = hardwareMap.crservo.get("level");
         sensorPut = hardwareMap.get(ColorSensor.class, "sensorPut");
 
+        waitForStart();
         level.setPower(0);
         servo_setup.setPower(0);
-        waitForStart();
         sensorPut.enableLed(true);
         put.setPosition(1);
         sleep(2000);
@@ -78,30 +78,31 @@ public class RedTeamAutonomie extends LinearOpMode{
         movement(0,0,0,0);
         //spin 90 grade
         movement(1,1,1,1);
-        sleep(1450);
+        sleep(1400);
         movement(0, 0, 0, 0);
         //basculeaza
-        servo_setup.setPower(1);
-        sleep(500);
-        servo_setup.setPower(0);
         //mergi in fata
         movement(-0.75,-0.75,0.75,0.75);
         sleep(800);
         movement(0, 0, 0, 0);
         //try all directions
-        movement(1,-1,1,-1);
+        /*movement(1,-1,1,-1);
         sleep(50);
         movement(-0.3,-0.3,0.3,0.3);
         sleep(600);
         movement(-0.3,-0.3,0.3,0.3);
         sleep(100);
         movement(-1,-1,1,1);
-        sleep(600);
-
+        sleep(600);*/
+        servo_setup.setPower(1);
+        sleep(500);
+        servo_setup.setPower(0);
         servo_setup.setPower(-1);
         sleep(500);
         servo_setup.setPower(0);
+        movement(1,1,-1,-1);
+        sleep(300);
         movement(0, 0, 0, 0);
-        sleep(5000);
+        sleep(1000);
     }
 }
