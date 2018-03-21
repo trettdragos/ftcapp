@@ -43,22 +43,34 @@ public class BlueTeamAutonomie extends LinearOpMode{
         sleep(2000);
         //pushing red
         if(sensorPut.red()>sensorPut.blue()){
+            telemetry.addData("r b:", sensorPut.red()+";"+sensorPut.blue());
+            telemetry.update();
+            sensorPut.enableLed(false);
             movement(1,1,-1,-1);
-            sleep(150);
-            movement(-1,-1,1,1);
-            sleep(150);
+            sleep(1000);
+            movement(0,0,0,0);
+            put.setPosition(0);
+            sleep(500);
+            movement(1,1,-1,-1);
+            sleep(1500);
         }else if(sensorPut.red()<sensorPut.blue()){
+
+            telemetry.addData("r b:", sensorPut.red()+";"+sensorPut.blue());
+            telemetry.update();
+            sensorPut.enableLed(false);
             movement(-1,-1,1,1);
-            sleep(150);
+            sleep(400);
+            movement(0,0,0,0);
+            put.setPosition(0);
+            sleep(500);
             movement(1,1,-1,-1);
-            sleep(150);
+            sleep(3000);
+        }else{
+            telemetry.addData("sensor", "not working");
+            telemetry.update();
         }
         movement(0,0,0,0);
-        put.setPosition(0.5);
-        sleep(2000);
-        telemetry.addData("r b:", sensorPut.red()+";"+sensorPut.blue());
-        telemetry.update();
-        sensorPut.enableLed(false);
+
         sleep(5000);
     }
 }
