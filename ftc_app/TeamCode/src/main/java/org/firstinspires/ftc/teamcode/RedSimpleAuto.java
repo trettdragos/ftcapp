@@ -77,7 +77,7 @@ public class RedSimpleAuto extends LinearOpMode{
         }
         movement(0,0,0,0);
         //spin 90 grade
-        movement(1,1,1,1);
+        /*movement(1,1,1,1);
         sleep(1400);
         movement(0, 0, 0, 0);
         //basculeaza
@@ -94,7 +94,7 @@ public class RedSimpleAuto extends LinearOpMode{
         sleep(100);
         movement(-1,-1,1,1);
         sleep(600);*/
-        servo_setup.setPower(1);
+        /*servo_setup.setPower(1);
         sleep(500);
         servo_setup.setPower(0);
         servo_setup.setPower(-1);
@@ -103,6 +103,6 @@ public class RedSimpleAuto extends LinearOpMode{
         movement(1,1,-1,-1);
         sleep(300);
         movement(0, 0, 0, 0);
-        sleep(1000);
+        sleep(1000);*/
     }
 }

@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * Created by trett on 2/19/18.
  */
-@Autonomous(name="BlueTeamAuto", group="Linear Opmode")
+@Autonomous(name="BlueTeamAuto CU CUB", group="Linear Opmode")
 
 public class BlueTeamAutonomie extends LinearOpMode{
 
@@ -37,6 +37,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
         back_left = hardwareMap.dcMotor.get("backLeft");
         back_right = hardwareMap.dcMotor.get("backRight");
         put = hardwareMap.servo.get("put");
+        servo_setup = hardwareMap.crservo.get("servos");
         sensorPut = hardwareMap.get(ColorSensor.class, "sensorPut");
 
         waitForStart();
@@ -51,7 +52,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
             movement(1,1,-1,-1);
             sleep(1000);
             movement(0,0,0,0);
-            put.setPosition(0);
+            put.setPosition(0.4);
             sleep(500);
             movement(1,1,-1,-1);
             sleep(1500);
@@ -63,7 +64,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
             movement(-1,-1,1,1);
             sleep(400);
             movement(0,0,0,0);
-            put.setPosition(0);
+            put.setPosition(0.4);
             sleep(500);
             movement(1,1,-1,-1);
             sleep(3000);
@@ -78,7 +79,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
         movement(0, 0, 0, 0);
         //basculeaza
         //mergi in fata
-        movement(0.75,0.75,-0.75,-0.75);
+        movement(-0.75,-0.75,0.75,0.75);
         sleep(800);
         movement(0, 0, 0, 0);
         //try all directions
