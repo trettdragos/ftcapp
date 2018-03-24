@@ -24,6 +24,7 @@ public class MecanumRobotC extends OpMode {
     CRServo servo_setup;
     Servo put;
     CRServo level;
+    double pozitiePut=0.4;
 
     @Override
     public void init() {
@@ -69,7 +70,8 @@ public class MecanumRobotC extends OpMode {
         else{
             movement(0,0,0,0, 1.0);
         }
-
+        if (gamepad1.x)
+            pozitiePut=0;
         if (gamepad2.a) {
             puller_left.setPower(-1);
             puller_right.setPower(1);
@@ -107,6 +109,6 @@ public class MecanumRobotC extends OpMode {
             servo_setup.setPower(0);
         }
 
-        put.setPosition(0.4);
+        put.setPosition(pozitiePut);
     }
 }

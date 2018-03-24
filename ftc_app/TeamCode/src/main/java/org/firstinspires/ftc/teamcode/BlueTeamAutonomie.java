@@ -75,7 +75,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
         movement(0,0,0,0);
         //spin 90 grade
         movement(1,1,1,1);
-        sleep(1400);
+        sleep(1500);
         movement(0, 0, 0, 0);
         //basculeaza
         //mergi in fata
@@ -97,7 +97,7 @@ public class BlueTeamAutonomie extends LinearOpMode{
         servo_setup.setPower(-1);
         sleep(500);
         servo_setup.setPower(0);
-        movement(-1,-1,1,1);
+        movement(1,1,-1,-1);
         sleep(300);
         movement(0, 0, 0, 0);
         sleep(1000);

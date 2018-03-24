@@ -59,7 +59,7 @@ public class RedTeamAutonomie extends LinearOpMode{
             put.setPosition(0.4);
             sleep(500);
             movement(-1,-1,1,1);
-            sleep(1700);
+            sleep(1500);
         }else if(sensorPut.red()<sensorPut.blue()){
             telemetry.addData("r b:", sensorPut.red()+";"+sensorPut.blue());
             telemetry.update();
@@ -70,7 +70,7 @@ public class RedTeamAutonomie extends LinearOpMode{
             put.setPosition(0.4);
             sleep(500);
             movement(-1,-1,1,1);
-            sleep(3200);
+            sleep(3000);
         }else{
             telemetry.addData("sensor", "not working");
             telemetry.update();
