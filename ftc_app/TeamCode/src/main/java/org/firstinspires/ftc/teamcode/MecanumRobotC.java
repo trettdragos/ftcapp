@@ -74,6 +74,7 @@ public class MecanumRobotC extends OpMode {
             pozitiePut = 0;
         if(gamepad1.y)
             pozitiePut = 0.4;
+
         if (gamepad2.a) {
             puller_left.setPower(-1);
             puller_right.setPower(1);
