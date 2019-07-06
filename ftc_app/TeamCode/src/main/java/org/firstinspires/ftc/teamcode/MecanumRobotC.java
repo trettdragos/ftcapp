@@ -22,9 +22,9 @@ public class MecanumRobotC extends OpMode {
     DcMotor puller_left;
     DcMotor puller_right;
     CRServo servo_setup;
-    Servo put;
+    //Servo put;
     CRServo level;
-    double pozitiePut=0.4;
+    //double pozitiePut=0.4;
 
     @Override
     public void init() {
@@ -35,7 +35,7 @@ public class MecanumRobotC extends OpMode {
         puller_left = hardwareMap.dcMotor.get("pullerLeft");
         puller_right = hardwareMap.dcMotor.get("pullerRight");
         servo_setup = hardwareMap.crservo.get("servos");
-        put = hardwareMap.servo.get("put");
+        //put = hardwareMap.servo.get("put");
         level = hardwareMap.crservo.get("level");
     }
 
@@ -70,11 +70,11 @@ public class MecanumRobotC extends OpMode {
         else{
             movement(0,0,0,0, 1.0);
         }
-        if (gamepad1.x)
+        /*if (gamepad1.x)
             pozitiePut = 0;
         if(gamepad1.y)
             pozitiePut = 0.4;
-
+        */
         if (gamepad2.a) {
             puller_left.setPower(-1);
             puller_right.setPower(1);
@@ -112,6 +112,6 @@ public class MecanumRobotC extends OpMode {
             servo_setup.setPower(0);
         }
 
-        put.setPosition(pozitiePut);
+        //put.setPosition(pozitiePut);
     }
 }

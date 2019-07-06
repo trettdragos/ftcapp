@@ -14,7 +14,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
  * Created by trett on 2/22/18.
  */
 
-@Autonomous(name="Colomn Detection Camera", group ="Camera")
+//@Autonomous(name="Colomn Detection Camera", group ="Camera")
 
 public class AutonomieImageDetection extends LinearOpMode{
 

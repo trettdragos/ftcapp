@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * Created by trett on 2/19/18.
  */
-@Autonomous(name="TelemetryBals", group="Linear Opmode")
+//@Autonomous(name="TelemetryBals", group="Linear Opmode")
 
 public class TelemetryBals extends LinearOpMode{
 

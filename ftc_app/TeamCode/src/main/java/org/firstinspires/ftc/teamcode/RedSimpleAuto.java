@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * Created by trett on 2/19/18.
  */
-@Autonomous(name="Red Simple NO CUBE", group="Linear Opmode")
+//@Autonomous(name="Red Simple NO CUBE", group="Linear Opmode")
 
 public class RedSimpleAuto extends LinearOpMode{
 

@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * Created by trett on 2/19/18.
  */
-@Autonomous(name="BlueTeamAuto CU CUB", group="Linear Opmode")
+//@Autonomous(name="BlueTeamAuto CU CUB", group="Linear Opmode")
 
 public class BlueTeamAutonomie extends LinearOpMode{
 
